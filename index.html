@@ -55,7 +55,7 @@
             border-radius: 16px;
         }
 
-        /* 1. 左右滑动舞台 (取代 3D 旋转) */
+        /* 1. 左右滑动舞台 */
         .slider-stage {
             width: 200%;
             height: 100%;
@@ -136,27 +136,6 @@
             text-align: center;
         }
 
-        .header-material {
-            margin-top: 5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            flex-shrink: 0;
-        }
-
-        .img-title-text {
-            max-height: 48px;
-            width: auto;
-            object-fit: contain;
-            margin-bottom: 4px;
-        }
-
-        .img-banner-ribbon {
-            width: 200px;
-            max-width: 70vw;
-            object-fit: contain;
-        }
-
         .illustration-container {
             position: relative;
             width: 100%;
@@ -216,7 +195,7 @@
         .btn-open:hover { transform: scale(1.05); }
 
         /* ==========================================================
-           第二页排版 (宽松精致布局)
+           第二页排版
            ========================================================== */
         .page-2-content {
             position: relative;
@@ -253,7 +232,6 @@
             line-height: 1.1;
         }
 
-
         .names-title {
             font-family: 'Great Vibes', cursive;
             margin: 8px 0 10px 0;
@@ -261,22 +239,10 @@
             text-align: center;
             white-space: nowrap;
             color: var(--title-brown);
-
             letter-spacing: 2px;
         }
 
-        .name-line {
-            font-size: 24px;
-            color: var(--title-brown);
-        }
-
-        .ampersand {
-            font-size: 20px;
-            color: var(--primary-red);
-            margin: 1px 0;
-        }
-
-        /* 3. 倒计时数字钟：加大字体 */
+        /* 倒计时数字钟 */
         .countdown-box {
             display: flex;
             gap: 10px;
@@ -295,7 +261,7 @@
 
         .time-number {
             font-family: 'Poppins', sans-serif;
-            font-size: 22px; /* 从 16px 调大至 22px */
+            font-size: 22px;
             font-weight: 700;
             color: var(--primary-red);
             line-height: 1;
@@ -307,10 +273,10 @@
             margin-top: 3px;
         }
 
-        /* 4. info-card：增加内边距与元素间距，解除拥挤感 */
+        /* 详情卡片 */
         .info-card {
             width: 100%;
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.30);
             border-radius: 16px;
             padding: 20px 16px;
             border: 1px solid var(--border-line);
@@ -318,7 +284,7 @@
             backdrop-filter: blur(5px);
             display: flex;
             flex-direction: column;
-            gap: 14px; /* 内部元素拉开间距 */
+            gap: 14px;
         }
 
         .date-header {
@@ -330,62 +296,19 @@
         .date-header .date-text {
             font-size: 15px;
             font-weight: 700;
-            color: var(--primary-red);
+            color: #EA4335;
+            text-shadow: 
+            -1px -1px 0 #FFFFFF,  
+            1px -1px 0 #FFFFFF,
+            -1px  1px 0 #FFFFFF,
+            1px  1px 0 #FFFFFF;
         }
 
         .date-header .lunar-text {
             font-size: 12px;
+            font-weight: 700;
             color: var(--sub-brown);
             margin-top: 3px;
-        }
-
-        .event-item {
-            display: flex;
-            align-items: center;
-        }
-
-        .event-icon {
-            width: 36px;
-            height: 36px;
-            background: #FDF2F2;
-            color: var(--primary-red);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            margin-right: 12px;
-            flex-shrink: 0;
-        }
-
-        .event-details { flex: 1; }
-        .event-title { font-size: 11.5px; color: var(--sub-brown); margin-bottom: 1px; }
-        .event-time-location { font-size: 14px; font-weight: 700; color: var(--title-brown); }
-        .event-sub { font-size: 11.5px; color: #7A6B68; margin-top: 1px; }
-
-        .nav-buttons-row {
-            display: flex;
-            gap: 10px;
-            width: 100%;
-            margin-top: 4px;
-        }
-
-        .btn-nav {
-            flex: 1;
-            padding: 10px 4px;
-            font-size: 12px;
-            font-weight: 600;
-            color: #FFFFFF;
-            background: var(--accent-gold);
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            box-shadow: 0 4px 10px rgba(212, 163, 89, 0.25);
         }
 
         .section-bottom {
@@ -408,7 +331,7 @@
             gap: 6px;
         }
 
-        /* Google 青蓝色光晕极简按钮 */
+        /* Google 青色光晕极简按钮 */
         .btn-nav-minimal {
             display: inline-flex;
             align-self: flex-start;
@@ -417,34 +340,32 @@
             padding: 5px 12px;
             font-size: 11px;
             font-weight: 600;
-            color: #007A78; /* Google 经典蓝色文字 */
-            background: linear-gradient(135deg, #FFFFFF, #F4F8FE);
-            border: 1px solid rgba(66, 133, 244, 0.35);
+            color: #007A78;
+            background: linear-gradient(135deg, #FFFFFF, #E6F8F6);
+            border: 1px solid rgba(0, 168, 150, 0.35);
             border-radius: 20px;
             text-decoration: none;
             transition: all 0.25s ease;
             margin-top: 2px;
-            /* 青蓝色发光扩散阴影 */
-            box-shadow: 0 2px 8px rgba(66, 133, 244, 0.18), 0 0 12px rgba(0, 172, 215, 0.12);
+            box-shadow: 0 2px 8px rgba(0, 168, 150, 0.2), 0 0 12px rgba(0, 196, 159, 0.25);
         }
 
         .btn-nav-minimal i.map-icon {
-            color: #FF0000; /* Google Maps 标志红色 */
+            color: #EA4335;
             font-size: 12px;
         }
 
         .btn-nav-minimal i.external-icon {
             font-size: 9px;
-            color: #1A73E8;
-            opacity: 0.7;
+            color: #00897B;
+            opacity: 0.75;
             margin-left: 1px;
         }
 
-        /* 点击反馈与增强光晕 */
         .btn-nav-minimal:active {
             transform: scale(0.97);
-            background: #E8F0FE;
-            box-shadow: 0 2px 12px rgba(66, 133, 244, 0.35), 0 0 16px rgba(0, 172, 215, 0.25);
+            background: #D1F2EE;
+            box-shadow: 0 2px 12px rgba(0, 168, 150, 0.4), 0 0 16px rgba(0, 206, 201, 0.35);
         }
 
         .music-toggle {
@@ -466,49 +387,22 @@
             transition: opacity 0.5s ease;
         }
 
-        /* ==========================================================
-   时间线 (Timeline) 样式
-   ========================================================== */
+        /* 时间线样式（纯文字与图标对齐，不加虚线） */
         .timeline {
-            position: relative;
-            padding-left: 20px; /* 留出左侧垂直轴线的空间 */
             display: flex;
             flex-direction: column;
-            gap: 22px; /* 节点之间的间距 */
+            gap: 20px;
             margin-top: 5px;
         }
 
-        /* 清除外层虚线 */
-        .timeline::before {
-            display: none;
-        }
-
-        /* 将虚线直接挂在第一个节点的图标下方，延伸至第二个节点 */
-        .timeline-item:first-child .timeline-node::after {
-            content: '';
-            position: absolute;
-            top: 36px; /* 从第一个图标底端开始 */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: calc(100% + 22px - 36px); /* 动态连接到下一个图标顶端 */
-            border-left: 2px dashed var(--border-line);
-            z-index: 1;
-        }
-
         .timeline-item {
-            position: relative;
             display: flex;
             align-items: flex-start;
-            z-index: 2;
         }
 
-        /* 节点图标 */
         .timeline-node {
             margin-right: 14px;
             flex-shrink: 0;
-            position: relative;
-            z-index: 2;
         }
 
         .event-icon {
@@ -525,7 +419,6 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         }
 
-        /* 节点右侧内容 */
         .timeline-content {
             flex: 1;
             display: flex;
@@ -534,43 +427,22 @@
         }
 
         .event-title { 
-            font-size: 11.5px; 
-            color: var(--sub-brown); 
+            font-size: 14.5px; 
+            color: #000000; 
+            font-weight: 700;
+            text-decoration: underline;
         }
 
         .event-time-location { 
             font-size: 14.5px; 
-            font-weight: 700; 
-            color: var(--title-brown); 
+            /* font-weight: 700;  */
+            color: #000000; 
         }
 
         .event-sub { 
-            font-size: 12px; 
-            color: #7A6B68; 
+            font-size: 14.5px; 
+            color: #000000; 
             margin-bottom: 6px;
-        }
-
-        /* 单个导航按钮微调 */
-        .timeline-content .btn-nav {
-            display: inline-flex;
-            align-self: flex-start;
-            padding: 6px 14px;
-            font-size: 11.5px;
-            font-weight: 600;
-            color: #FFFFFF;
-            background: var(--accent-gold);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            align-items: center;
-            gap: 5px;
-            box-shadow: 0 3px 8px rgba(212, 163, 89, 0.22);
-            transition: transform 0.2s ease;
-        }
-
-        .timeline-content .btn-nav:active {
-            transform: scale(0.97);
         }
 
         .music-toggle.visible { opacity: 1; pointer-events: auto; }
@@ -601,26 +473,16 @@
                 </div>
 
                 <div class="page-1-content">
-                    <!-- <div class="header-material">
-                        <img src="assets/title_qingjian.png" alt="请柬" class="img-title-text" 
-                             onerror="this.style.display='none'; document.getElementById('alt-title').style.display='block';">
-                        <h2 id="alt-title" style="display:none; font-family:'Ma Shan Zheng', cursive; font-size:36px; color:var(--title-brown);">请柬</h2>
-                        
-                        <img src="assets/banner_invitation.png" alt="INVITATION" class="img-banner-ribbon"
-                             onerror="this.style.display='none'; document.getElementById('alt-banner').style.display='block';">
-                        <div id="alt-banner" style="display:none; font-family:'Cinzel', serif; font-size:14px; letter-spacing:4px; color:var(--primary-red); background:#FDF4F4; padding:2px 16px; border-radius:12px; border:1px solid #F5D2D2;">INVITATION</div>
-                    </div> -->
-
                     <div class="illustration-container">
-                        <img src="assets/couple_illustration.png" alt="Wedding Couple" class="img-couple-illustration"
-                             onerror="this.src='https://cdni.iconscout.com/illustration/premium/thumb/wedding-couple-4488347-3738456.png';">
+                        <!-- <img src="assets/couple_illustration.png" alt="Wedding Couple" class="img-couple-illustration"
+                             onerror="this.src='https://cdni.iconscout.com/illustration/premium/thumb/wedding-couple-4488347-3738456.png';"> -->
                     </div>
 
                     <div class="quote-container">
                         <img src="assets/quote_text.png" alt="我们决定一起去探索世界的乐趣 不必完美 但需尽兴" class="img-quote-text"
                              onerror="this.style.display='none'; document.getElementById('alt-quote').style.display='block';">
                         <p id="alt-quote" style="display:none; font-size:18px; color:var(--title-brown); line-height:1.6; font-style:italic; font-weight: bold;">
-                            我们决定一起去探索世界的乐趣<br>不必完美 但需尽兴
+                            我们决定一起去探索这个世界<br>不必完美 但需尽兴
                         </p>
                     </div>
 
@@ -649,8 +511,7 @@
                         
                         <div class="names-title">Liau Yong Siang   &   Chai Mei Lin</div>
 
-                        
-                        <!-- 加大数字后的倒计时 -->
+                        <!-- 倒计时 -->
                         <div class="countdown-box" id="countdown">
                             <div class="time-unit"><div class="time-number" id="days">00</div><div class="time-label">天</div></div>
                             <div class="time-unit"><div class="time-number" id="hours">00</div><div class="time-label">时</div></div>
@@ -659,7 +520,7 @@
                         </div>
                     </div>
 
-                    <!-- 时间线风格的详情卡片 -->
+                    <!-- 详情卡片 -->
                     <div class="info-card">
                         <div class="date-header">
                             <div class="date-text"><i class="fa-regular fa-calendar-check" style="margin-right: 4px;"></i> 2026 年 10 月 01 日 (星期四)</div>
@@ -679,7 +540,7 @@
                                     
                                     <a href="https://maps.google.com/?q=古来德教会紫霭阁" target="_blank" class="btn-nav-minimal">
                                         <i class="fa-solid fa-location-dot map-icon"></i>
-                                        <span>Google 导航 - 古来德教会</span>
+                                        <span>Google 导航</span>
                                         <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
                                     </a>
                                 </div>
@@ -697,7 +558,7 @@
                                     
                                     <a href="https://maps.google.com/?q=古来悦香亭酒楼" target="_blank" class="btn-nav-minimal">
                                         <i class="fa-solid fa-location-dot map-icon"></i>
-                                        <span>Google 导航 - 古来悦香亭酒楼</span>
+                                        <span>Google 导航</span>
                                         <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i>
                                     </a>
                                 </div>
@@ -725,7 +586,6 @@
         const bgm = document.getElementById('bgm');
         const musicToggle = document.getElementById('musicToggle');
 
-        /* 控制向左/向右滑动切换 */
         function goToPage2() {
             appContainer.classList.add('show-page-2');
             musicToggle.classList.add('visible');
