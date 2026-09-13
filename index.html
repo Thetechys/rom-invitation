@@ -313,22 +313,33 @@
 
         .section-bottom {
             width: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5px;
+            flex-shrink: 0;
         }
 
         .btn-back {
-            width: 100%;
-            padding: 10px;
-            font-size: 13px;
+            padding: 12px 18px;
+            font-size: 18px;
             font-weight: 600;
-            color: var(--title-brown);
-            background: rgba(255, 255, 255, 0.88);
-            border: 1px solid var(--border-line);
-            border-radius: 10px;
+            color: #FFFFFF;
+            background: linear-gradient(135deg, var(--primary-red), #B03A3A);
+            border: none;
+            border-radius: 50px;
             cursor: pointer;
+            box-shadow: 0 10px 25px rgba(197, 75, 75, 0.35);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            letter-spacing: 4px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 6px;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .btn-back:hover { 
+            transform: scale(1.05); 
         }
 
         /* Google 青色光晕极简按钮 */
