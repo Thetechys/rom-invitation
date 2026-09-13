@@ -484,6 +484,28 @@
             }
         }
 
+        .parking-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: 6px;
+            padding: 2px 8px;
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #8B5E3C; /* 暖雅咖啡棕 */
+            background: #FFF8EE; /* 柔和浅米黄背景 */
+            border: 1px solid rgba(212, 163, 89, 0.4);
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(212, 163, 89, 0.12);
+            vertical-align: middle;
+        }
+
+        .parking-badge i {
+            color: var(--accent-gold);
+            font-size: 11px;
+        }
+
+
         .music-toggle.visible { opacity: 1; pointer-events: auto; }
         .music-toggle.playing i { animation: rotateMusic 4s linear infinite; }
         @keyframes rotateMusic { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
@@ -592,9 +614,14 @@
                                     <div class="event-icon"><i class="fa-solid fa-utensils"></i></div>
                                 </div>
                                 <div class="timeline-content">
-                                    <div class="event-title">午宴聚餐 (Lunch)</div>
+                                    <div class="event-title">午餐 (Lunch)</div>
                                     <div class="event-time-location">1:00 PM</div>
-                                    <div class="event-sub">古来悦香亭酒楼</div>
+                                    <div class="event-sub">古来悦香亭酒楼
+                                        <div class="parking-badge">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                            <span>温馨提醒：驾车来宾请记得放置泊车固本哦</span>
+                                        </div>
+                                    </div>
                                     
                                     <a href="https://maps.google.com/?q=古来悦香亭酒楼" target="_blank" class="btn-nav-minimal">
                                         <i class="fa-solid fa-location-dot map-icon"></i>
